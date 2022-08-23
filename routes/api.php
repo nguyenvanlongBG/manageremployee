@@ -25,3 +25,4 @@ Route::post('/login', [UserController::class, 'login']);
 Route::get('/userInfo', [UserController::class, 'getUserInfo'])->middleware('auth:sanctum');
 Route::post('/posts/createPost', [PostController::class, 'create'])->middleware('auth:sanctum');
 Route::get('/posts', [PostController::class, 'listPosts'])->middleware('auth:sanctum');
+Route::delete('/posts/delete/{id}', [PostController::class, 'delete'])->middleware('auth:sanctum');
